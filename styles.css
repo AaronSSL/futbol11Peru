@@ -1,0 +1,188 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #0a1017;
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    border-bottom: 1px solid #1e2a38;
+}
+
+.header-left, .header-right {
+    display: flex;
+    gap: 15px;
+}
+
+.icon-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.logo {
+    font-size: 32px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #ffd700; /* Amarillo dorado */
+    text-transform: uppercase;
+}
+
+.logo-highlight {
+    color: #40e0d0; /* Turquesa */
+}
+
+/* Main Game Area */
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0 30px;
+    max-width: 500px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Game Grid */
+.game-grid {
+    display: grid;
+    /* El número de columnas se establecerá dinámicamente en JavaScript */
+    gap: 10px;
+    width: 100%;
+    padding: 10px;
+}
+
+.game-tile {
+    aspect-ratio: 1/1;
+    background-color: #1e2a38;
+    border-radius: 5px;
+    border: 2px solid #2c3a4a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.2s ease;
+}
+
+.game-tile.filled {
+    background-color: #2c3a4a;
+    border-color: #3c4a5a;
+    transform: scale(1.02);
+}
+
+/* Estilos para los diferentes estados de las letras */
+.game-tile.correct {
+    background-color: #538d4e; /* Verde para letras correctas */
+    border-color: #6aad62;
+}
+
+.game-tile.wrong-position {
+    background-color: #b59f3b; /* Amarillo para letras en posición incorrecta */
+    border-color: #d2ba45;
+}
+
+.game-tile.incorrect {
+    background-color: #3a3a3c; /* Gris oscuro para letras incorrectas */
+    border-color: #4a4a4c;
+}
+
+/* Keyboard */
+.keyboard {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.keyboard-row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 8px;
+}
+
+.key {
+    min-width: 40px;
+    height: 58px;
+    margin: 0 4px;
+    border-radius: 4px;
+    background-color: white;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: lowercase;
+    cursor: pointer;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.1s ease;
+}
+
+.key:active {
+    transform: scale(0.95);
+    background-color: #e0e0e0;
+}
+
+.key.wide {
+    min-width: 80px;
+    font-size: 16px;
+}
+
+/* Estilos para las teclas del teclado según su estado */
+.key.key-correct {
+    background-color: #538d4e; /* Verde para letras correctas */
+    color: white;
+    opacity: 0.8;
+}
+
+.key.key-wrong-position {
+    background-color: #b59f3b; /* Amarillo para letras en posición incorrecta */
+    color: white;
+    opacity: 0.8;
+}
+
+.key.key-incorrect {
+    background-color: #3a3a3c; /* Gris oscuro para letras incorrectas */
+    color: white;
+    opacity: 0.6;
+}
+
+/* Responsive Design */
+@media (max-width: 500px) {
+    .game-grid {
+        gap: 5px;
+    }
+    
+    .key {
+        min-width: 30px;
+        height: 45px;
+        margin: 0 2px;
+        font-size: 16px;
+    }
+    
+    .key.wide {
+        min-width: 60px;
+        font-size: 14px;
+    }
+    
+    .game-tile {
+        font-size: 20px;
+    }
+}
