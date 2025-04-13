@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FUTBOL11 - Juegos de Fútbol Peruano</title>
+  <link rel="stylesheet" href="Inicio.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <script>
+    // Guardar en localStorage (persistente) y sessionStorage (por sesión)
+    localStorage.setItem("accesoPermitido", "true");
+    sessionStorage.setItem("sesionActiva", "true");
+  </script>
+  <header class="logo-container">
+    <div class="logo-inner">
+      <a href="Inicio.html" class="logo">FUTBOL<span class="logo-highlight">11</span></a>
+      <div class="header-right">
+        <div class="follow-text">
+          sígueme y escríbeme para mejorar la página <i class="fas fa-arrow-right"></i>
+        </div>
+        <a href="https://www.instagram.com/aaronssl27/" target="_blank" class="icon-button instagram-btn">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <div class="tagline">Demuestra tu conocimiento de fútbol peruano</div>
+
+  <main>
+    <h2 class="games-title">Selecciona un juego</h2>
+    
+    <div class="games-grid">
+      <!-- Juego 1 - FUTBOL11 Original -->
+      <div class="game-card">
+        <div class="game-thumbnail">
+          <img src="imagen1.png">
+        </div>
+        <div class="game-info">
+          <h3>WORDLE</h3>
+          <p>Adivina apellidos de futbolistas peruanos</p>
+          <a href="index.html" class="play-button">JUGAR</a>
+        </div>
+      </div>
+      
+      <!-- Juego 2 - Próximamente -->
+      <div class="game-card">
+        <div class="game-thumbnail">
+          <img src="imagen2.png">
+        </div>
+        <div class="game-info">
+          <h3>GRID</h3>
+          <p>Encuentra al jugador que cumpla las 2 condiciones</p>
+          <a href="index2.html" class="play-button">JUGAR</a>
+        </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 FUTBOL11 - Todos los derechos reservados</p>
+  </footer>
+</body>
+</html>

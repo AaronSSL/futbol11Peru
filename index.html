@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+  <script>
+    // Redirigir solo si NO hay acceso en localStorage NI en sessionStorage
+    if (
+        localStorage.getItem("accesoPermitido") !== "true" ||
+        sessionStorage.getItem("sesionActiva") !== "true"
+    ) {
+        window.location.replace("Inicio.html");
+    }
+  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FUTBOL11 - Juego de Palabras de Fútbol</title>
@@ -9,20 +18,20 @@
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head>
 <body>
-  <header>
-      <div class="header-left">
-          <button class="icon-button"><i class="fas fa-info-circle"></i></button>
-          <button class="icon-button"><i class="fas fa-chart-bar"></i></button>
-      </div>
-      <div class="logo">FUTBOL<span class="logo-highlight">11</span></div>
-      <div class="header-right">
-          <div class="follow-text">sigueme y escribeme para mejorar la pagina <i class="fas fa-arrow-right"></i></div>
-          <a href="https://www.instagram.com/1924aaron/" target="_blank" class="icon-button instagram-btn">
+    <header class="logo-container">
+        <div class="logo-inner">
+          <a href="Inicio.html" class="logo">FUTBOL<span class="logo-highlight">11</span></a>
+          <div class="header-right">
+            <div class="follow-text">
+              sígueme y escríbeme para mejorar la página <i class="fas fa-arrow-right"></i>
+            </div>
+            <a href="https://www.instagram.com/aaronssl27/" target="_blank" class="icon-button instagram-btn">
               <i class="fab fa-instagram"></i>
-          </a>
-      </div>
-  </header>
-
+            </a>
+          </div>
+        </div>
+      </header>
+         
   <div class="tagline">Demuestra tu conocimiento de fútbol peruano</div>
 
   <main>
@@ -63,6 +72,7 @@
               <button class="key">v</button>
               <button class="key">b</button>
               <button class="key">n</button>
+              <button class="key">ñ</button>
               <button class="key">m</button>
               <button class="key wide">bksp</button>
           </div>

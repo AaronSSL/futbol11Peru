@@ -6,7 +6,7 @@
   }
   
   body {
-    background-color: #ffffff; /* Blanco como la bandera de Perú */
+    background-color: #750606; /* Blanco como la bandera de Perú */
     color: #222;
     min-height: 100vh;
     display: flex;
@@ -19,25 +19,11 @@
     justify-content: space-between;
     align-items: center;
     padding: 15px 20px;
-    border-bottom: 1px solid #d91023;
+    border-bottom: 5px solid black;
     background-color: #d91023; /* Rojo como la bandera de Perú */
     color: white;
   }
   
-  .header-left,
-  .header-right {
-    display: flex;
-    gap: 15px;
-    align-items: center;
-  }
-  
-  .icon-button {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 24px;
-    cursor: pointer;
-  }
   
   .instagram-btn {
     font-size: 28px;
@@ -58,7 +44,61 @@
   .follow-text i {
     animation: bounce 1s infinite;
   }
-  
+
+/* Estilo del header */
+/* Contenedor principal del header */
+.logo-container {
+  background-color: #d7141a;
+  height: 70px;
+  width: 100%;
+  display: flex;
+  justify-content: center; /* centra el contenido */
+  align-items: center;
+}
+
+/* Contenedor interno centrado */
+.logo-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding-left: 550px; /* margen desde la izquierda */
+  padding-right: 20px;
+  box-sizing: border-box;
+}
+
+
+/* Logo a la izquierda */
+.logo {
+  font-size: 32px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+/* Parte resaltada del logo */
+.logo-highlight {
+  color: #ffffff;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
+}
+
+/* Texto + ícono a la derecha */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  font-size: 14px;
+}
+
+/* Icono de Instagram */
+.icon-button {
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+}
+
   @keyframes bounce {
     0%,
     100% {
@@ -69,28 +109,18 @@
     }
   }
   
-  .logo {
-    font-size: 32px;
-    font-weight: bold;
-    letter-spacing: 1px;
-    color: white;
-    text-transform: uppercase;
-  }
-  
-  .logo-highlight {
-    color: #ffffff; /* Blanco */
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
-  }
-  
+
+
+
   /* Tagline */
   .tagline {
     text-align: center;
     padding: 15px;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: bold;
     color: #d91023; /* Rojo */
     background-color: #f8f8f8;
-    border-bottom: 2px solid #d91023;
+    border-bottom: 5px solid black;
   }
   
   /* Main Game Area */
@@ -119,7 +149,7 @@
     aspect-ratio: 1 / 1;
     background-color: #ffffff;
     border-radius: 5px;
-    border: 2px solid #d91023;
+    border: 5px solid black;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -178,7 +208,7 @@
     font-weight: bold;
     text-transform: lowercase;
     cursor: pointer;
-    border: 1px solid #d91023;
+    border: 3px solid black;
     display: flex;
     align-items: center;
     justify-content: center;

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <script>
+    // Redirigir solo si NO hay acceso en localStorage NI en sessionStorage
+    if (
+        localStorage.getItem("accesoPermitido") !== "true" ||
+        sessionStorage.getItem("sesionActiva") !== "true"
+    ) {
+        window.location.replace("Inicio.html");
+    }
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FUTBOL11 - Grid Game</title>
+  <link rel="stylesheet" href="styles2.css">    
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+  <header class="logo-container">
+    <div class="logo-inner">
+      <a href="Inicio.html" class="logo">FUTBOL<span class="logo-highlight">11</span></a>
+      <div class="header-right">
+        <div class="follow-text">
+          sígueme y escríbeme para mejorar la página <i class="fas fa-arrow-right"></i>
+        </div>
+        <a href="https://www.instagram.com/aaronssl27/" target="_blank" class="icon-button instagram-btn">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+    </div>
+  </header>
+       
+  <div class="tagline">Demuestra tu conocimiento de fútbol peruano</div>
+
+  <main>
+    <div class="grid-container">
+      <div class="grid-header">
+        <div class="grid-title">FUTBOL11 <span>GRID</span></div>
+      </div>
+      
+      <!-- Primera fila de clubes -->
+      <div class="grid-top-row">
+        <div class="empty-cell"></div>
+        <div class="club-cell" id="top-1">
+          <div class="club-image"></div>
+          <div class="club-name"></div>
+        </div>
+        <div class="club-cell" id="top-2">
+          <div class="club-image"></div>
+          <div class="club-name"></div>
+        </div>
+        <div class="club-cell2" id="top-3">
+          <div class="club-image"></div>
+          <div class="club-name"></div>
+        </div>
+      </div>
+      
+      <!-- Filas del grid con clubes a la izquierda -->
+      <div class="grid-row">
+        <div class="club-cell" id="left-1">
+          <div class="club-image"></div>
+          <div class="club-name"></div>
+        </div>
+        <div class="grid-cell" data-row="0" data-col="0"></div>
+        <div class="grid-cell" data-row="0" data-col="1"></div>
+        <div class="grid-cell" data-row="0" data-col="2"></div>
+      </div>
+      
+      <div class="grid-row">
+        <div class="club-cell" id="left-2">
+          <div class="club-image"></div>
+          <div class="club-name"></div>
+        </div>
+        <div class="grid-cell" data-row="1" data-col="0"></div>
+        <div class="grid-cell" data-row="1" data-col="1"></div>
+        <div class="grid-cell" data-row="1" data-col="2"></div>
+      </div>
+      
+      <div class="grid-row">
+        <div class="club-cell" id="left-3">
+          <div class="club-image"></div>
+          <div class="club-name"></div>
+        </div>
+        <div class="grid-cell" data-row="2" data-col="0"></div>
+        <div class="grid-cell" data-row="2" data-col="1"></div>
+        <div class="grid-cell" data-row="2" data-col="2"></div>
+      </div>
+    </div>
+
+    <div class="input-container">
+      <input type="text" id="player-input" placeholder="Type the footballer here" />
+      <button id="submit-btn">
+        <i class="fas fa-flag"></i>
+      </button>
+    </div>
+
+    <div class="message-container" id="message-container"></div>
+  </main>
+
+  <script src="script2.js"></script>
+</body>
+</html>
